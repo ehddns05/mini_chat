@@ -1,0 +1,23 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "mini_chat",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehddns05/mini_chat.git"
+  },
+  "author": "jeong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ehddns05/mini_chat/issues"
+  },
+  "homepage": "https://github.com/ehddns05/mini_chat#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}
