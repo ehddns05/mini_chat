@@ -1,8 +1,8 @@
 var socket = io()
 
-// 접속 되었을 때 실행 
+// 접속 되었을 때 실행
 socket.on('connect', function() {
-  // 이름을 입력받고 
+  // 이름을 입력받고
   var name = prompt('반갑습니다!', '')
 
   // 이름이 빈칸인 경우
@@ -10,11 +10,11 @@ socket.on('connect', function() {
     name = '익명'
   }
 
-  // 서버에 새로운 유저가 왔다고 알림 
+  // 서버에 새로운 유저가 왔다고 알림
   socket.emit('newUser', name)
 })
 
-// 서버로부터 데이터 받은 경우 
+// 서버로부터 데이터 받은 경우
 socket.on('update', function(data) {
   var chat = document.getElementById('chat')
 
@@ -46,7 +46,7 @@ socket.on('update', function(data) {
 function send() {
   // 입력되어있는 데이터 가져오기
   var message = document.getElementById('test').value
-  
+
   // 가져왔으니 데이터 빈칸으로 변경
   document.getElementById('test').value = ''
 
@@ -60,4 +60,11 @@ function send() {
 
   // 서버로 message 이벤트 전달 + 데이터와 함께
   socket.emit('message', {type: 'message', message: message})
+}
+
+// dummy method for PR test PR
+function _each(list, iter){
+  for(var i=0; i<list.length; i++){
+    iter(list[i])
+  }
 }
